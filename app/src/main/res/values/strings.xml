@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">RetirementCalculator</string>
+    <string name="retirement_calculator_str">Retirement Calculator</string>
+    <string name="monthly_savings_str">Monthly Savings</string>
+    <string name="interest_rate_str">Interest Rate</string>
+    <string name="your_current_age_str">Your Current Age</string>
+    <string name="planned_retirement_age_str">Planned retirement Age</string>
+    <string name="current_savings_str">Current Savings</string>
+    <string name="calculate_str">Calculate</string>
+
+
 </resources>

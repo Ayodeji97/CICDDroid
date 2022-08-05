@@ -1,18 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <EditText
+        android:id="@+id/monthly_savings_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:hint="@string/monthly_savings_str"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/interest_calculator_title_tv" />
+
+    <EditText
+        android:id="@+id/interest_rate_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/interest_rate_str"
+        android:inputType="number"
+        android:layout_marginTop="@dimen/margin_16"
+        app:layout_constraintEnd_toEndOf="@+id/monthly_savings_et"
+        app:layout_constraintStart_toStartOf="@+id/monthly_savings_et"
+        app:layout_constraintTop_toBottomOf="@+id/monthly_savings_et" />
+
+    <EditText
+        android:id="@+id/current_age_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16"
+        android:inputType="number"
+        android:hint="@string/your_current_age_str"
+        app:layout_constraintEnd_toEndOf="@+id/interest_rate_et"
+        app:layout_constraintStart_toStartOf="@+id/interest_rate_et"
+        app:layout_constraintTop_toBottomOf="@+id/interest_rate_et" />
+
+    <EditText
+        android:id="@+id/planned_retirement_age_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_marginTop="@dimen/margin_16"
+        android:hint="@string/planned_retirement_age_str"
+        app:layout_constraintEnd_toEndOf="@+id/current_age_et"
+        app:layout_constraintStart_toStartOf="@+id/current_age_et"
+        app:layout_constraintTop_toBottomOf="@+id/current_age_et" />
+
+    <EditText
+        android:id="@+id/current_savings_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16"
+        android:inputType="number"
+        android:hint="@string/current_savings_str"
+        app:layout_constraintEnd_toEndOf="@+id/planned_retirement_age_et"
+        app:layout_constraintStart_toStartOf="@+id/planned_retirement_age_et"
+        app:layout_constraintTop_toBottomOf="@+id/planned_retirement_age_et" />
+
     <TextView
+        android:id="@+id/interest_calculator_title_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="@string/retirement_calculator_str"
+        android:textSize="@dimen/textSize_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/retirement_calculator_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_24"
+        android:text="@string/calculate_str"
+        app:layout_constraintEnd_toEndOf="@+id/current_savings_et"
+        app:layout_constraintStart_toStartOf="@+id/current_savings_et"
+        app:layout_constraintTop_toBottomOf="@+id/current_savings_et" />
+
+    <TextView
+        android:id="@+id/retirement_calculator_result_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_24"
+        android:paddingBottom="@dimen/padding_16"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/retirement_calculator_btn"
+        app:layout_constraintStart_toStartOf="@+id/retirement_calculator_btn"
+        app:layout_constraintTop_toBottomOf="@+id/retirement_calculator_btn" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

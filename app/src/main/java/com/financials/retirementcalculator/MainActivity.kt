@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        AppCenter.start(application, "130e0dbe-f201-484b-b192-a07f3cc6fb4b", Analytics::class.java, Crashes::class.java)
+        AppCenter.start(application, "869bae3a-d8f4-47e1-99af-9a1c6da35278", Analytics::class.java, Crashes::class.java)
 
         retirementButton = findViewById(R.id.retirement_calculator_btn)
         monthlySavingsEt = findViewById(R.id.monthly_savings_et)

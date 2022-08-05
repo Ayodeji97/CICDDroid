@@ -39,6 +39,11 @@ class MainActivity : AppCompatActivity() {
             val interestRate = interestRateEt.text.toString().toFloat()
             val currentAge = currentAgeEt.text.toString()
             val retirementAge = plannedRetirementAgeEt.text.toString()
+            val monthlySavings = monthlySavingsEt.text.toString()
+            val currentSavings = currentSavingsEt.text.toString()
+
+            calculateRetirementResult.text = "At the current rate of ${interestRate}, if your monthly savings is $monthlySavings" +
+                    "and your retirement age is $retirementAge, then your current savings is $currentSavings"
 
 
             if (interestRate <= 0) {
